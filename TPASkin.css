@@ -18,7 +18,10 @@ body {
 	background-position:top left;
 	background-color: #1c2125;
 }
-
+#theme-picker {
+	position: absolute;
+	right: 10;
+}
 #banner-wrapper {
 	margin-left: auto;
 	margin-right: auto;

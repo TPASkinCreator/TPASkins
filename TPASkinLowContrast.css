@@ -1,0 +1,933 @@
+html {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+form {
+	display:inline;
+}
+img  {
+	vertical-align:middle;
+	border:0px;
+}
+
+/* This is where you change your banner, it's actually a background which sticks to the corer so obviously I would recommend making an image that would work well for such a venture. */
+body {
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: 11px;
+	color: #7f8587;
+	background-position:top left;
+	background-color: #1D1F21;
+}
+
+#banner-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1050px;
+	padding-right: 10px;
+	z-index: 0;
+}
+#banner-wrapper img {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(75%); /* Chrome 19+ & Safari 6+ */
+	float: left;
+	margin-left: -160px;
+	position: absolute;
+}
+
+/* The background for your forums and what keeps them padded in the center, only edit the width and colors (trust me on this one) */
+.forumbg {
+	max-width:1050px;
+	float:center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:300px;
+	margin-bottom:25px;
+	background-color:#2E3032;
+	padding-bottom:10px;
+	border:1px solid #495154;
+}
+.forumwidth {
+	max-width: 1050px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#forums {
+	width: 94%;
+}
+
+/* The main navigation which links to your index, members, plot, rules and the like.  Edit at will */
+.main {
+	font-weight: bold;
+	background-color: #495154;
+	padding: 0px;
+	text-align: center;
+}
+.main a:link, .main a:active, .main a:visited {
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+	color: #25272B;
+	background-color: #3D4042;
+}
+.main a:hover {
+	background-color: #25272B;
+	color: #3D4042;
+}
+
+
+/* Your announcement box style stuff, this is also where you can change the background image or replace it with a color if you would rather */
+#box-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1050px;
+	padding-right: 10px;
+	z-index: 99;
+}
+#box {
+	margin-top: 70px;
+	z-index: 100;
+	position: relative;
+	float: right;
+	margin-right: 10px;
+}
+.box {
+	background-color: #46484B;
+	height: 202px;
+	width: 400px;
+	padding: 10px;
+	border: 1px solid #46484B;
+	overflow: auto;
+	-webkit-border-bottom-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.btext {
+	background-color: #585a5d;
+	text-align: justify;
+	font-size: .7rem;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	height: 192px;
+	padding: 5px;
+	overflow-y: auto;
+}
+
+.btext div {
+	display: none;
+}
+
+.btext div.active {
+	display: block;
+}
+
+/* This is where the specific announcement box tabs go */
+#welcome {
+	text-align: center;
+}
+#welcome h2 {
+	font-size: 1rem;
+	font-weight: 100;
+	color: #7A868B;
+}
+#welcome a:hover {
+	color: #242928;
+}
+
+#events {
+	text-align: center;
+}
+#events h3 {
+	font-size: 1rem;
+	color: #7A868B;
+}
+
+
+/* This is the navigation that goes above the box linking to external websites and twitter and the like.  Don't mess with the margins but everything else is fair game */
+.navigation {
+	margin-left:0px;
+	margin-bottom:5px;
+}
+.navigation span {
+	color: #717575;
+	background-color: #292C2F;
+	padding:5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid #292C2F;
+	border-bottom: none;
+}
+.navigation span.active {
+	background-color: #46484B;
+	color: #C5C8C6;
+	border: 1px solid #46484B;
+	border-bottom: none;
+}
+.navigation span:not(.active):hover {
+	background-color:#242928;
+	color:#495154;
+	cursor: pointer;
+}
+
+/* This bit is for the links that go in your forum description for your sub-forums and whatnot.  You're welcome to edit these but be careful they get a bit tricky */
+.minilinks {
+	text-align:center;
+	border:1px solid #495154;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	display:block;
+	margin-top:-10px;
+}
+.minilinks a:link, .minilinks a:visited, .minilinks a:active {
+	background-color:#363D40;
+	border:1px solid #495154;
+	padding-left:5px;
+	padding-right:5px;
+	color:#495154;
+}
+.minilinks a:hover {
+	background-color:#dbdbdb;
+	border:1px solid #333;
+	color:#333;
+}
+
+/* Don't mess with this part, it's my credits and you love me so you want my credits to be pretty right? XD */
+.credits {
+	background-color:#222527;
+	color:#555;
+	text-align:center;
+}
+.credits a:link, a:visited {
+	color: #4F6C52;
+}
+.credits a:hover {
+	color:#36473A;
+}
+
+/* This keeps the copyrights from looking glaringly retarded so I don't recommend touching this bit */
+div.row4 {
+	border:none !important;
+	background:none !important;
+}
+
+
+table, tr, td {
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: .8rem;
+	color: #7f8587;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #3A535A;
+	text-transform:uppercase;
+	font-size: .7rem;
+	font-weight:bold;
+}
+a:hover {
+	color: #2e4248;
+	text-decoration:none;
+}
+
+fieldset.search {
+	padding:6px;
+	line-height:150%;
+}
+label {
+	cursor:pointer;
+}
+
+img.attach {
+	border:2px outset #EEF2F7;
+	padding:2px;
+}
+
+.googleroot  {
+	padding:6px;
+	line-height:130%;
+}
+.googlechild {
+	padding:6px;
+	margin-left:30px;
+	line-height:130%;
+}
+.googlebottom, .googlebottom a:link, .googlebottom a:visited, .googlebottom a:active {
+	font-size:11px;
+	color: #3A4F6C;
+}
+.googlish, .googlish a:link, .googlish a:visited, .googlish a:active {
+	font-size:14px;
+	font-weight:bold;
+	color:#00D;
+}
+.googlepagelinks {
+	font-size:1.1em;
+	letter-spacing:1px;
+}
+.googlesmall, .googlesmall a:link, .googlesmall a:active, .googlesmall a:visited {
+	font-size:10px;
+	color:#434951;
+}
+
+li.helprow {
+	padding:0px;
+	margin:0px 0px 10px 0px;
+}
+ul#help {
+	padding:0px 0px 0px 15px;
+}
+ul span {
+	line-height: 160% !important;
+}
+option.cat {
+	font-weight:bold;
+}
+option.sub {
+	font-weight:bold;
+	color:#555;
+}
+.caldate {
+	text-align:right;
+	font-weight:bold;
+	font-size:11px;
+	color:#777;
+	background-color:#dbdbdb;
+	padding:4px;
+	margin:0px;
+}
+
+.warngood {
+	color:green;
+}
+.warnbad {
+	color:red;
+}
+
+#padandcenter {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:14px 0px 14px 0px;
+}
+
+#profilename {
+	font-size:28px;
+	font-weight:bold;
+}
+#calendarname {
+	font-size:22px;
+	font-weight:bold;
+}
+
+#photowrap {
+	padding:6px;
+}
+#phototitle {
+	font-size:24px;
+	border-bottom:1px solid black;
+}
+#photoimg {
+	text-align:center;
+	margin-top:15px;
+}
+
+#ucpmenu {
+	line-height:150%;
+	width:22%;
+	border:1px solid #495154;
+	background-color: #20282B;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#ucpmenu p {
+	padding:2px 5px 6px 9px;
+	margin:0px;
+}
+#ucpcontent {
+	background-color: #20282B;
+	border:1px solid #495154;
+	line-height:150%;
+	width:auto;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#ucpcontent p {
+	padding:10px;
+	margin:0px;
+}
+
+#ipsbanner {
+	position:absolute;
+	top:1px;
+	right:5%;
+}
+#logostrip {
+	display:none;
+}
+#submenu {
+	display:none;
+}
+#submenu a:link, #submenu  a:visited, #submenu a:active {
+	font-weight:bold;
+	font-size:10px;
+	text-decoration: none;
+	color: #3A4F6C;
+}
+#userlinks {
+	border:1px solid #303030;
+	background-color: #222527;
+}
+/*#userlinks a {
+	color: #3C5040;
+}
+#userlinks a:hover {
+	color: #394C3D;
+}*/
+
+#navstrip {
+	font-weight:bold;
+	padding:0px;
+	background-color:#1D1F21;
+	color: #8d8d8d;
+}
+#navstrip a {
+	color:#6D6F70;
+	padding:2px 5px 2px 5px;
+}
+#navstrip a:hover {
+	color:#868989;
+}
+#navstrip img {
+	display: none;
+}
+
+.activeuserstrip {
+	background-color: #7A868B;
+	color: #8d8d8d;
+	text-align: center;
+}
+
+.activeuserstrip a {
+	color: #495154;
+}
+
+.activeuserstrip a:hover {
+	color: #363D40;
+}
+
+.pformstrip {
+	font-weight:bold;
+	padding:0px;
+	background-color:#5b6265;
+	color:#2b3032;
+	font-size:.6rem;
+	text-transform:uppercase;
+	text-align:center;
+}
+.pformstrip a {
+	color:#495154;
+}
+.pformstrip a:hover {
+	color:#363D40;
+}
+.pformleft {
+	background-color: #1D1F21;
+	padding:6px;
+	margin-top:1px;
+	width:25%;
+	border-top:1px solid #495154;
+	border-right:1px solid #495154;
+}
+.pformleftw {
+	background-color: #1D1F21;
+	padding:6px; margin-top:1px;
+	width:40%;
+	border-top:1px solid #FFF;
+	border-right:1px solid #FFF;
+}
+.pformright {
+	background-color: #1D1F21;
+	padding:6px;
+	margin-top:1px;
+	border-top:1px solid #495154;
+}
+
+.post1 {
+	background-color: #222526;
+	min-width: 115px;
+	max-width: 115px;
+}
+.post2 {
+	background-color: #222526;
+	min-width: 115px;
+	max-width: 115px;
+}
+
+.post1 img, .post2 img, .postcolor img {
+	max-width: 100%;
+}
+
+.postlinksbar {
+	font-weight:bold;
+	padding:0px;
+	background-color:#7A868B;
+	color:#495154;
+	font-size:.55rem;
+	text-transform:uppercase;
+	text-align:center;
+}
+.postlinksbar a {
+	color:#495154;
+	font-size:.55rem;
+}
+.postlinksbar a:hover {
+	color:#dbdbdb;
+}
+
+.row1, .row2, .row3, .row4 {
+	background-color: #1D1F21;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+.row4 a {
+	text-align:center;
+	margin-bottom:-15px;
+}
+.row4 a:hover {
+	color:#7f8587;
+}
+.row4 a b {
+	background-color:#495154;
+	display:inline;
+}
+
+.darkrow1, .darkrow2, .darkrow3 {
+	background-color: #41484b;
+	color:#333;
+}
+
+.hlight {
+	background-color: #363D40;
+}
+.dlight {
+	background-color: #363D40;
+}
+
+.titlemedium {
+	font-weight:bold;
+	padding:0px;
+	background-color:#5b6265;
+	color:#2b3032;
+	font-size:.6rem;
+	text-transform:uppercase;
+	text-align:center;
+}
+.titlemedium  a:link, .titlemedium  a:visited, .titlemedium  a:active {
+	text-decoration: none;
+	color: #2b3032;
+}
+
+.maintitle {
+	font-weight:bold;
+	background-color: #41484b;
+	color:#333;
+	text-align:center;
+	font-size:1rem;
+	text-transform:uppercase;
+	padding:5px 0px 5px 0px;
+	letter-spacing:2px;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.maintitle a:link, .maintitle  a:visited, .maintitle  a:active {
+	text-decoration: none;
+	font-weight:bold;
+	color:#333;
+	text-align:center;
+	font-size: 1rem;
+	text-transform:uppercase;
+}
+.maintitle a:hover {
+	text-decoration: none;
+}
+.maintitle img {
+	display: none;
+}
+
+table[id="forums and sidebar"] {
+	width: 100%;
+	max-width: 1024px;
+}
+
+.plainborder {
+	border: 1px solid #FFF;
+	background-color: #20282B;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.tableborder {
+	border:1px solid #495154;
+	background-color: #41484b;
+	padding:0px 0px 8px 0px;
+	margin:0px;
+	width:100%;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.tableborder .row4 b a:link, .tableborder .row4 b a:active, .tableborder .row4 b a:visited {
+	letter-spacing:2px;
+	font-size: .9rem;
+	text-align: left;
+}
+
+.tableborder .row4 b a:hover {
+	color: #384A52;
+}
+
+.tablefill {
+	border:1px solid #495154;
+	background-color:#dbdbdb;
+	padding:6px;
+}
+.tablepad {
+	padding:6px;
+}
+.tablebasic {
+	width:100%;
+	padding:0px 0px 0px 0px;
+	margin:0px;
+	border:0px;
+}
+
+.wrapmini {
+	float:left;
+	line-height:1.5em;
+	width:30%;
+}
+.pagelinks {
+	float:left;
+	line-height:1.2em;
+	width:35%;
+}
+
+.desc {
+	font-size:10px;
+	color:#666;
+	text-align:justify;
+	padding:5px;
+	display:block;
+}
+.edit {
+	font-size: 9px;
+}
+
+.signature {
+	font-size: 10px;
+}
+.postdetails {
+	font-size: .7rem;
+}
+.postdetails a {
+	text-decoration: none;
+}
+.postcolor {
+	font-size: .8rem;
+	line-height: 160%;
+}
+.postcolor span, .signature span {
+	color: #7f8587 !important;
+	/*opacity: 0.5;*/
+}
+
+.normalname {
+	font-size: .9rem;
+	font-weight: bold;
+	color: #7A868B;
+}
+.normalname a:link, .normalname a:visited, .normalname a:active {
+	font-size: .9rem;
+	color: #7A868B;
+}
+.normalname a:hover {
+	color: #384a52;
+}
+.unreg {
+	font-size: 11px;
+	font-weight: bold;
+	color: #900;
+}
+
+.searchlite {
+	font-weight:bold;
+	color:#F00;
+	background-color:#FF0;
+}
+
+#QUOTE {
+	border:1px solid #495154;
+	color: #555;
+	background-color:#eee;
+	padding:5px;
+}
+#CODE {
+	font-family: 'Courier New';
+	border:1px solid #495154;
+	background-color:#eee;
+	padding:5px;
+}
+
+.copyright {
+	font-family: Verdana, Tahoma, Arial, Sans-Serif;
+	font-size: 9px;
+	line-height: 12px;
+}
+
+.codebuttons {
+	font-size: 10px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	vertical-align: middle;
+	border:1px solid #495154;
+	background-color:#2E3032;
+	color: #7f8587;
+}
+.forminput, .textinput, .radiobutton, .checkbox {
+	font-size: .8rem;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	vertical-align: middle;
+	border:1px solid #495154;
+	background-color: #2E3032;
+	color: #7f8587;
+}
+
+.thin {
+	padding:6px 0px 6px 0px;
+	line-height:140%;
+	margin:2px 0px 2px 0px;
+}
+.thin a {
+	display:inline;
+}
+.thin a:hover {
+	color: #495154;
+}
+
+.purple {
+	color:purple;
+	font-weight:bold;
+}
+.red {
+	color:red;
+	font-weight:bold;
+}
+.green {
+	color:green;
+	font-weight:bold;
+}
+.blue {
+	color:blue;
+	font-weight:bold;
+}
+.orange {
+	color:#F90;
+	font-weight:bold;
+}
+
+/* This is some special CSS for buttons that don't have images (yet?) */
+.new-topic {
+	font-size: 1.2rem;
+	margin: 0 0.5rem;
+	display: inline-block;
+	font-weight: 100;
+}
+.new-reply {
+	font-size: 1.2rem;
+	margin: 0 0.5rem;
+	display: inline-block;
+	background-color: #444444;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-weight: 100;
+	color: #1D1F21;
+}
+.new-reply:hover {
+	background-color: #1D1F21;
+	color: #3a535a;
+}
+.new-poll {
+	font-size: 1.2rem;
+	margin: 0 0.5rem;
+	display: inline-block;
+	font-weight: 100;
+}
+
+.darkrow3 a+a {
+	padding-left: 15px;
+}
+
+.darkrow3 a {
+	color: #7A868B;
+}
+
+.darkrow3 a:hover {
+	color: #22363F;
+}
+
+.topbutton {
+	color: #7A868B;
+	padding-left: 15px;
+}
+
+.topbutton:hover {
+	color: #22363F;
+}
+
+#vertical-toggle {
+	position: fixed;
+	bottom: 15px;
+	right: 5px;
+	width: 12%;
+	max-width: 200px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #242928;
+	border: 1px solid #495154;
+	cursor: pointer;
+	padding: 10px;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: 11px;
+	color: #7A868B;
+	text-align: center;
+	letter-spacing: 0.4em;
+}
+
+#vertical-toggle:hover {
+	background-color: #495154;
+	color: #242928;
+}
+
+#chatter {
+	padding: 10px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background-image: url(YOUR URL);
+	background-color: #242928;
+	border: 1px solid #495154;
+	position: fixed;
+	bottom: 49px;
+	right: 5px;
+	z-index: 100;
+	display: none;
+	width: 12%;
+	max-width: 200px;
+}
+
+#cboxdiv iframe {
+	width: 100%;
+}
+
+@media (max-width: 1440px) {
+	.forumbg {
+		max-width: 900px;
+	}
+	.forumwidth {
+		max-width: 900px;
+	}
+	#box-wrapper {
+		max-width: 900px;
+	}
+}
+
+@media (max-width: 1250px) {
+	#chatter {
+		display: block;
+		position: static;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		width: 97%;
+		max-width: 900px;
+		float: center;
+	}
+
+	#vertical-toggle {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	#banner-wrapper img, #banner-wrapper::before {
+		width: 800px !important;
+		top: 130;
+	}
+
+	textarea {
+		width: 95%;
+		max-width: 95%;
+	}
+}
+
+@media (max-width: 800px) {
+	#banner-wrapper img {
+		top: 0;
+	}
+
+	#box {
+		position: absolute;
+		margin-top: 190px;
+	}
+
+	#forums {
+		top: 160 !important;
+	}
+}
+
+@media (max-width: 543px) {
+	#box {
+		left: 0;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.box {
+		box-sizing: border-box;
+		height: auto;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.btext {
+		height: 202px;
+	}
+}
+
+@media (max-width: 500px) {
+	#forums {
+		left: 0 !important;
+		width: 100%;
+	}
+
+	.tableborder {
+		max-width: 460px;
+		box-sizing: border-box;
+	}
+
+	#chatter {
+		width: 95%;
+		max-width: 470px;
+	}
+}
